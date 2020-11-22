@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddeaf6"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:rotation="-15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comic"
+            android:text="@string/paper"
+            android:textColor="#f6b26b"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-17dp"
+            android:fontFamily="@font/comic"
+            android:text="@string/scissors"
+            android:textColor="#93c47d"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-17dp"
+            android:fontFamily="@font/comic"
+            android:text="@string/rock"
+            android:textColor="#c27ba0"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/comic"
+            android:text="@string/player_one"
+            android:textColor="#00b0f0"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnRockPlayerOne"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/pick_rock"
+            android:focusable="true"
+            android:src="@drawable/ic_rock"
+            android:tag="rock" />
+
+        <ImageButton
+            android:id="@+id/btnPaperPlayerOne"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/pick_paper"
+            android:focusable="true"
+            android:src="@drawable/ic_paper"
+            android:tag="paper" />
+
+        <ImageButton
+            android:id="@+id/btnScissorsPlayerOne"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/pick_scissors"
+            android:focusable="true"
+            android:src="@drawable/ic_scissors"
+            android:tag="scissors" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llResult"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:gravity="center"
+        android:rotation="-15">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comic"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:text="@string/versus"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="80sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/comic"
+            android:text="@string/computer"
+            android:textColor="#00b0f0"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnRockPlayerTwo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:contentDescription="@string/pick_rock"
+            android:padding="10dp"
+            android:src="@drawable/ic_rock"
+            android:tag="rock" />
+
+        <ImageButton
+            android:id="@+id/btnPaperPlayerTwo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:contentDescription="@string/pick_paper"
+            android:padding="10dp"
+            android:src="@drawable/ic_paper"
+            android:tag="paper" />
+
+        <ImageButton
+            android:id="@+id/btnScissorsPlayerTwo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:contentDescription="@string/pick_scissors"
+            android:padding="10dp"
+            android:src="@drawable/ic_scissors"
+            android:tag="scissors" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnRefresh"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:contentDescription="@string/refresh"
+        android:src="@drawable/ic_refresh" />
+
+</RelativeLayout>

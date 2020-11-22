@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">rock paper scissors</string>
+    <string name="paper">Kertas</string>
+    <string name="scissors">Gunting</string>
+    <string name="rock">Batu</string>
+    <string name="player_one">Pemain 1</string>
+    <string name="versus">VS</string>
+    <string name="computer">COM</string>
+    <string name="refresh">Reset Game</string>
+    <string name="player_one_win">Pemain 1\nMENANG!</string>
+    <string name="player_two_win">Pemain 2\nMENANG!</string>
+    <string name="draw">DRAW\n</string>
+    <string name="pick_rock">pick_rock</string>
+    <string name="pick_paper">pick_paper</string>
+    <string name="pick_scissors">pick_scissors</string>
+</resources>
