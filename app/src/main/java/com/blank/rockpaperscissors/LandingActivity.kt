@@ -10,7 +10,7 @@ import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class LandingActivity : AppCompatActivity() {
 
-    private lateinit var name: String
+    private var name: String = ""
     private lateinit var vpLanding: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +35,7 @@ class LandingActivity : AppCompatActivity() {
                         .apply {
                             putExtra("Name" , name)
                             startActivity(this)
+                            finish()
                         }
                 }
                 else -> {

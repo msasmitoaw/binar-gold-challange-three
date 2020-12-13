@@ -4,13 +4,12 @@
     <string name="versus">VS</string>
     <string name="computer">COM</string>
     <string name="refresh">Reset Game</string>
-    <string name="player_one_win">Pemain 1\nMENANG!</string>
-    <string name="player_two_win">Pemain 2\nMENANG!</string>
+    <string name="player_one_win">Pemain 1 MENANG!</string>
+    <string name="player_two_win">Pemain 2 MENANG!</string>
     <string name="draw">DRAW\n</string>
     <string name="pick_rock">pick_rock</string>
     <string name="pick_paper">pick_paper</string>
     <string name="pick_scissors">pick_scissors</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="menu_title">PILIH LAWANMU</string>
     <string name="vs_player">Ervin VS Pemain</string>
     <string name="vs_cpu">Ervin VS CPU</string>

@@ -44,7 +44,10 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
                 when {
                     index < 3 -> {
                         refresh(false , isAll = false)
-                        Log.d("MainActivity" , "Player One: ${btn.tag}")
+                        Log.d(
+                            "MainActivity" ,
+                            "$name Memilih ${btn.tag.toString().capitalize()}"
+                        )
                         Toast.makeText(
                             this ,
                             "$name Memilih ${btn.tag.toString().capitalize()}" ,
@@ -105,7 +108,10 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
             findViewById<ImageButton>(i).setOnClickListener {
                 refresh(false , isAll = true)
                 val btn = it as ImageButton
-                Log.d("MainActivity" , "Player: ${btn.tag}")
+                Log.d(
+                    "MainActivity" ,
+                    "Player 2 Memilih ${btn.tag.toString().capitalize()}"
+                )
                 Toast.makeText(
                     this ,
                     "Player 2 Memilih ${btn.tag.toString().capitalize()}" ,
@@ -121,7 +127,7 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
     }
 
     private fun selectComputer(s: String?) {
-        Log.d("MainActivity" , "Player Two: $s")
+        Log.d("MainActivity" , "CPU Memilih ${s.toString().capitalize()}")
         Toast.makeText(
             this ,
             "CPU Memilih ${s.toString().capitalize()}" ,
@@ -142,7 +148,6 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
     }
 
     override fun result(s: String) {
-        Log.d("MainActivity" , "Result : $s")
         val view = LayoutInflater.from(this@MainActivity)
             .inflate(R.layout.custom_dialog , null , false)
         val dialogBuilder = AlertDialog.Builder(this@MainActivity)
@@ -154,23 +159,22 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
         val tvDialogResult = view.findViewById<TextView>(R.id.tvDialogResult)
 
         btnBackToMenu.setOnClickListener {
-            this.finish()
+            finish()
         }
 
         btnReset.setOnClickListener {
             refresh(true , isAll = false)
             dialog.dismiss()
         }
-        when (s) {
-            getString(R.string.player_one_win) -> tvDialogResult.text =
-                "$name\nMENANG!"
-            getString(R.string.player_two_win) -> tvDialogResult.text =
-                "PEMAIN 2\nMENANG!"
-            else -> tvDialogResult.text =
-                "SERI!"
+        val gameEnd = when (s) {
+            getString(R.string.player_one_win) -> "$name\nMENANG!"
+            getString(R.string.player_two_win) -> "$mode\nMENANG!"
+            else -> "SERI!"
         }
-        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent);
-        dialog.setCanceledOnTouchOutside(false);
+        tvDialogResult.text = gameEnd
+        Log.d("MainActivity" , "Hasil : $gameEnd")
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.setCanceledOnTouchOutside(false)
         dialog.show()
     }
 }
