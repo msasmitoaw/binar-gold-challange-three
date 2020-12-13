@@ -169,6 +169,7 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
             else -> tvDialogResult.text =
                 "SERI!"
         }
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent);
         dialog.setCanceledOnTouchOutside(false);
         dialog.show()
     }
