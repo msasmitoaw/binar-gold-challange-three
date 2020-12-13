@@ -110,11 +110,11 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
                 val btn = it as ImageButton
                 Log.d(
                     "MainActivity" ,
-                    "Player 2 Memilih ${btn.tag.toString().capitalize()}"
+                    "$mode Player 2 Memilih ${btn.tag.toString().capitalize()}"
                 )
                 Toast.makeText(
                     this ,
-                    "Player 2 Memilih ${btn.tag.toString().capitalize()}" ,
+                    "$mode Memilih ${btn.tag.toString().capitalize()}" ,
                     Toast.LENGTH_SHORT
                 ).show()
                 btn.background =
@@ -127,10 +127,10 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
     }
 
     private fun selectComputer(s: String?) {
-        Log.d("MainActivity" , "CPU Memilih ${s.toString().capitalize()}")
+        Log.d("MainActivity" , "$mode Memilih ${s.toString().capitalize()}")
         Toast.makeText(
             this ,
-            "CPU Memilih ${s.toString().capitalize()}" ,
+            "$mode Memilih ${s.toString().capitalize()}" ,
             Toast.LENGTH_SHORT
         ).show()
         mutableListOf(
