@@ -14,4 +14,7 @@
     <string name="menu_title">PILIH LAWANMU</string>
     <string name="vs_player">Ervin VS Pemain</string>
     <string name="vs_cpu">Ervin VS CPU</string>
+    <string name="play_again">Main Lagi</string>
+    <string name="back_to_menu">Kembali Ke Menu</string>
+    <string name="game_result">Hasil Permainan</string>
 </resources>

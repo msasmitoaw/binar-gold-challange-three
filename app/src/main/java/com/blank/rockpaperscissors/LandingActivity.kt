@@ -10,7 +10,8 @@ import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class LandingActivity : AppCompatActivity() {
 
-    private var name: String = ""
+    private lateinit var name: String
+    private lateinit var vpLanding: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +21,7 @@ class LandingActivity : AppCompatActivity() {
             name = it.toString()
         }
 
-        val vpLanding = findViewById<ViewPager2>(R.id.vpLanding)
+        vpLanding = findViewById<ViewPager2>(R.id.vpLanding)
         vpLanding.adapter = viewPagerAdapter
         findViewById<DotsIndicator>(R.id.diLanding).setViewPager2(vpLanding)
 
@@ -45,4 +46,8 @@ class LandingActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onBackPressed() =
+        if (vpLanding.currentItem > 0) vpLanding.currentItem =
+            vpLanding.currentItem.minus(1) else finish()
 }

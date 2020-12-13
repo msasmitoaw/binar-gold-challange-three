@@ -55,4 +55,8 @@ class MenuActivity : AppCompatActivity() {
             startActivity(this)
         }
     }
+
+    override fun onBackPressed() {
+        finish()
+    }
 }

@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 
-
 class MainActivity : AppCompatActivity() , CallbackMsg {
+
     private lateinit var name: String
     private lateinit var mode: String
 
@@ -173,6 +173,4 @@ class MainActivity : AppCompatActivity() , CallbackMsg {
         dialog.setCanceledOnTouchOutside(false);
         dialog.show()
     }
-
-
 }
