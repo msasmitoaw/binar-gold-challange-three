@@ -3,46 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ddeaf6"
+    android:background="@color/blue_bg"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:rotation="-15">
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/comic"
-            android:text="@string/paper"
-            android:textColor="#f6b26b"
-            android:textSize="42sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-17dp"
-            android:fontFamily="@font/comic"
-            android:text="@string/scissors"
-            android:textColor="#93c47d"
-            android:textSize="42sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-17dp"
-            android:fontFamily="@font/comic"
-            android:text="@string/rock"
-            android:textColor="#c27ba0"
-            android:textSize="42sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivTitle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
 
     <LinearLayout
         android:layout_width="120dp"
@@ -56,6 +37,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvPlayer1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -74,8 +56,8 @@
             android:clickable="true"
             android:contentDescription="@string/pick_rock"
             android:focusable="true"
-            android:src="@drawable/ic_rock"
-            android:tag="rock" />
+            android:src="@drawable/ic_batu"
+            android:tag="batu" />
 
         <ImageButton
             android:id="@+id/btnPaperPlayerOne"
@@ -86,8 +68,8 @@
             android:clickable="true"
             android:contentDescription="@string/pick_paper"
             android:focusable="true"
-            android:src="@drawable/ic_paper"
-            android:tag="paper" />
+            android:src="@drawable/ic_kertas"
+            android:tag="kertas" />
 
         <ImageButton
             android:id="@+id/btnScissorsPlayerOne"
@@ -98,8 +80,8 @@
             android:clickable="true"
             android:contentDescription="@string/pick_scissors"
             android:focusable="true"
-            android:src="@drawable/ic_scissors"
-            android:tag="scissors" />
+            android:src="@drawable/ic_gunting"
+            android:tag="gunting" />
     </LinearLayout>
 
     <LinearLayout
@@ -138,9 +120,10 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvPlayer2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
+            android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/comic"
             android:text="@string/computer"
@@ -156,8 +139,8 @@
             android:background="@null"
             android:contentDescription="@string/pick_rock"
             android:padding="10dp"
-            android:src="@drawable/ic_rock"
-            android:tag="rock" />
+            android:src="@drawable/ic_batu"
+            android:tag="batu" />
 
         <ImageButton
             android:id="@+id/btnPaperPlayerTwo"
@@ -167,8 +150,8 @@
             android:background="@null"
             android:contentDescription="@string/pick_paper"
             android:padding="10dp"
-            android:src="@drawable/ic_paper"
-            android:tag="paper" />
+            android:src="@drawable/ic_kertas"
+            android:tag="kertas" />
 
         <ImageButton
             android:id="@+id/btnScissorsPlayerTwo"
@@ -178,8 +161,8 @@
             android:background="@null"
             android:contentDescription="@string/pick_scissors"
             android:padding="10dp"
-            android:src="@drawable/ic_scissors"
-            android:tag="scissors" />
+            android:src="@drawable/ic_gunting"
+            android:tag="gunting" />
     </LinearLayout>
 
     <ImageButton
