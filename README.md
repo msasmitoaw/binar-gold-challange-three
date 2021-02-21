@@ -1,6 +1,6 @@
 ## Binar-Gold-Code Challange Three [The Next of https://github.com/msasmitoaw/binar-gold-challange-two]
 A rock-paper-scissor game as android game using Kotlin and implement:
-MVC design, SplashScreen, Fragment ViewPager2, Intent Player Name, Snack Bar, Custom Dialog, Permission Internet to get internet resource not soon.
+MVC design, SplashScreen, Fragment ViewPager2, Intent Player Name, Snack Bar, Custom Dialog, Permission Internet to get internet resource not soon next.
 
 # UPDATE! Brand new Feature NEW!
 - Input Player Name
